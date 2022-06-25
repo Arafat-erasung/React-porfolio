@@ -27,7 +27,7 @@ const Navbar = () => {
   return (
     <div className='flex justify-between items-center w-full h-20 text-white fixed bg-black'>
       <h1 className='px-4 text-4xl '>Erasung</h1>
-      <ul className='hidden md:flex'>
+      <ul className='hidden md:flex mr-10'>
       {links.map(({id, link}) => {
         return <li 
         key={id} 
