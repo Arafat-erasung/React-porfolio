@@ -1,7 +1,7 @@
 import React from 'react'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
-import {HiOutlineMail} from 'react-icons/hi'
-import {BsFillPersonLinesFill} from 'react-icons/bs'
+import { FaTwitter } from 'react-icons/fa'
+import { FaYoutube } from 'react-icons/fa'
 
 const SocialLinks = () => {
 
@@ -19,33 +19,38 @@ const SocialLinks = () => {
             child: (
                 <>Github <FaGithub size={30} /></>
             ),
-            href: "https://www.linkedin.com/in/arafat-erasung-16677a154/",
-            style: "rounded-tr-md"
+            href: "https://github.com/Arafat-erasung",
         },
         {
-            id: 2,
+            id: 3,
             child: (
-                <>Linkedin <FaLinkedin size={30}/></>
+                <>Twitter <FaTwitter size={30}/></>
             ),
             href: "https://www.linkedin.com/in/arafat-erasung-16677a154/",
-            style: "rounded-tr-md"
         },
         {
-            id: 1,
+            id: 4,
             child: (
-                <>Linkedin <FaLinkedin size={30}/></>
+                <>YouTube <FaYoutube size={30}/> </>
             ),
             href: "https://www.linkedin.com/in/arafat-erasung-16677a154/",
-            style: "rounded-tr-md"
+            style: "rounded-br-md"
         },
     ]
 
   return (
-    <div className='flex-col top-[35%] left-0 fixed'>
+    <div className='hidden lg:flex flex-col top-[35%] left-0 fixed'>
         <ul>
-            <li className='flex justify-between items-center w-40 h-14 px-4 ml-[-100px] bg-slate-700 hover: rounded-md duration-300 hover:ml-[-10px]'><a href=''
+
+        {Links.map(({id, child, href, style}) => (
+            // eslint-disable-next-line no-useless-concat
+            <li key={id} className={'flex justify-between items-center w-40 h-14 px-4 ml-[-100px] bg-slate-700 hover: rounded-md duration-300 hover:ml-[-10px]' + ' ' + style}>
+            <a href={href}
             className='flex justify-between items-center w-full text-white'
-            >Linkedin <FaLinkedin size={30}/></a></li>
+            target='_blank' rel="noreferrer"
+            >{child}</a></li>
+        ))}
+            
         </ul>
     </div>
   )
