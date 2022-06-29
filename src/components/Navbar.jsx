@@ -21,11 +21,11 @@ const Navbar = () => {
     },
     {
       id: 4,
-      link: "contact"
+      link: "Contact"
     },
     {
       id: 5,
-      link: "portfolio"
+      link: "Portfolio"
     },
   ]
 
@@ -51,7 +51,7 @@ const Navbar = () => {
         return <li 
         key={id} 
         className='px-4 cursor-pointer font-medium text-grey-600 hover:text-white text-4xl py-6'>
-        <Link to="{link}" smooth duration={500}>{link}</Link></li>
+        <Link to={link} smooth duration={500}>{link}</Link></li>
       })}
       </ul>
       )}
